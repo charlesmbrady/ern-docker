@@ -1,4 +1,4 @@
-# client/Dockerfile-dev
+# client/Dockerfile
 
 # This is the build file for the client module,
 # Docker will use this to setup the client container image.
