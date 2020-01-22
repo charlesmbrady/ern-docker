@@ -1,8 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import API from './utils/API';
+import axios from 'axios';
 
 function App() {
+  const check = () => {
+    API.getCheck().then(res => {
+      if(res) {
+        console.log("success! " + res.data)
+      }
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,8 +26,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Deploy to AWS
         </a>
+        <button onClick={() => check()}>Check</button>
       </header>
     </div>
   );
